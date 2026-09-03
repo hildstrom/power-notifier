@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- https://launchd.info was very helpful here -->
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>power-notifier</string>
+        <key>Program</key>
+        <string>/Users/username/Documents/power-notifier</string>
+	<key>ProgramArguments</key>
+	<array>
+    		<string>/Users/username/Documents/power-notifier</string>
+		<string>hostname</string>
+		<string>/Users/username/.power-notifier.log</string>
+		<string>http://ntfy.sh/personal-url-for-power-notifier</string>
+	</array>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>

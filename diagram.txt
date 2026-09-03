@@ -1,0 +1,12 @@
+@startuml
+
+component "Power Notifier\n(Rust Tokio)" as pn
+component "log file" as log
+component ntfy.sh
+component phone
+
+pn <-right-> ntfy.sh : HTTP\nPOST
+ntfy.sh -right-> phone : Push\nNotification
+pn <-down-> log : File I/O
+
+@enduml
